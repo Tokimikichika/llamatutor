@@ -73,7 +73,7 @@ export const suggestions: suggestionType[] = [
 ];
 
 export const getSystemPrompt = (
-  finalResults: { fullContent: string }[],
+  finalResults: { fullContent: string }[] = [],
   ageGroup: string,
 ) => {
   return `
@@ -83,10 +83,10 @@ export const getSystemPrompt = (
 
   <teaching_info>
   ${"\n"}
-  ${finalResults
+  ${(finalResults || []) // Добавляем проверку на существование
     .slice(0, 7)
     .map(
-      (result, index) => `## Webpage #${index}:\n ${result.fullContent} \n\n`,
+      (result, index) => `## Webpage #${index}:\n ${result?.fullContent || ''} \n\n`, // Добавляем проверку для fullContent
     )}
   </teaching_info>
 

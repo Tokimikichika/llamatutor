@@ -7,6 +7,8 @@
   An open source AI personal tutor. Powered by Llama 3 70B & Together.ai
 </p>
 
+[![Deploy with Vercel](https://vercel.com/button)](https://llamatutor-brkd96d3e-nikitas-projects-09319d29.vercel.app/)
+
 ## Tech stack
 
 - Llama 3.1 70B from Meta for the LLM
@@ -35,3 +37,57 @@
 - [ ] Add nice hamburger menu on mobile
 - [ ] Try out the generative UI stuff from Vercel
 - [ ] Add a nicer dropdown overall
+
+## Getting Started 🚀
+
+
+### Installation
+```
+git clone https://github.com/Tokimikichika/llamatutor
+cd llamatutor
+npm install
+```
+
+##### Configuration
+1. Copy environment template:
+
+```
+cp .example.env .env
+```
+
+2. Update .env with your keys:
+
+```
+TOGETHER_API_KEY="your_together_key"
+SERPER_API_KEY="your_serper_key"
+# OR for Azure:
+# AZURE_SEARCH_KEY="your_azure_key"
+# AZURE_SEARCH_ENDPOINT="azure_endpoint"
+
+HELICONE_API_KEY="your_helicone_key"
+NEXT_PUBLIC_PLAUSIBLE_DOMAIN="your_domain.com"
+Running Locally
+```
+
+3. Running Locally
+```
+npm run dev
+```
+
+4. Open http://localhost:3000 in your browser.
+
+
+### Deployment 🌐
+
+Vercel (Recommended)
+Import your repository to Vercel Dashboard
+
+Add all environment variables from .env
+
+Set build settings:
+
+Build Command: npm run build
+
+Output Directory: .next
+
+Node.js Version: 18.x
