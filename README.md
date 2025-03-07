@@ -60,12 +60,7 @@ cp .example.env .env
 ```
 TOGETHER_API_KEY="your_together_key"
 SERPER_API_KEY="your_serper_key"
-# OR for Azure:
-# AZURE_SEARCH_KEY="your_azure_key"
-# AZURE_SEARCH_ENDPOINT="azure_endpoint"
-
 HELICONE_API_KEY="your_helicone_key"
-NEXT_PUBLIC_PLAUSIBLE_DOMAIN="your_domain.com"
 Running Locally
 ```
 
